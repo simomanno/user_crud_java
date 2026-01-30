@@ -18,6 +18,6 @@ public class UserService {
      * se viene trovato almeno un utente
      */
     public List<User> search(String name, String surname){
-        return userRepository.findByNameAndSurname(name, surname);
+        return userRepository.findByNameContainingIgnoreCaseAndSurnameContainingIgnoreCase(name, surname);
     }
 }

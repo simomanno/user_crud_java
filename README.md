@@ -13,7 +13,7 @@ This project implements a system to manage users together with massive import th
 2. `docker-compose up --build`
 
 ## Main Endpoints 
-- `GET /api/users/search`: Filtered research by name and surname.
+- `GET /api/users/search`: Filtered research by name and surname, optional.
 - `POST /api/users/upload`: Massive import from CSV file.
 
 

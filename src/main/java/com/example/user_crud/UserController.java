@@ -64,7 +64,7 @@ public class UserController {
         @RequestParam(required = false) String surname
     )
     {
-        List<User> results = userRepository.findByNameAndSurname(name == null ? "" : name, surname == null ? "" : surname);
+        List<User> results = userRepository.findByNameContainingIgnoreCaseAndSurnameContainingIgnoreCase(name == null ? "" : name, surname == null ? "" : surname);
         return new ResponseEntity<>(results, HttpStatus.OK);
 
     }
